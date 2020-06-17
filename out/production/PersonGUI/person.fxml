@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" prefHeight="678.0" prefWidth="837.0"
+            xmlns="http://javafx.com/javafx/8.0.171" fx:controller="com.yannick.FX.PersonController">
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="202.0" prefWidth="837.0" spacing="50.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets/>
+            </BorderPane.margin>
+            <children>
+                <Button fx:id="btnRetrievePerson" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                         text="Retrieve person" textAlignment="CENTER"/>
+                <Button fx:id="btnSaveNewPerson" defaultButton="true" mnemonicParsing="false"
+                        text="Save new person"/>
+                <Button fx:id="btnClearAllFields" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false"
+                         text="Clear all fields" textAlignment="CENTER"/>
+            </children>
+        </HBox>
+    </bottom>
+    <top>
+        <MenuBar fx:id="menuBar"  BorderPane.alignment="CENTER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem fx:id="close" onAction="#close" mnemonicParsing="false" text="Close"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" onAction="#about"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+    <center>
+        <VBox alignment="CENTER" prefHeight="225.0" prefWidth="466.0">
+            <children>
+                <Label fx:id="lblErrorText" textFill="#bf2a2a">
+                    <font>
+                        <Font size="24.0"/>
+                    </font>
+                </Label>
+                <Label fx:id="lblName" alignment="CENTER" prefHeight="44.0" prefWidth="111.0" text="Name: ">
+                    <font>
+                        <Font name="Dubai Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="txtName" prefWidth="200.0">
+                    <padding>
+                        <Insets left="250.0" right="250.0"/>
+                    </padding>
+                </JFXTextField>
+                <Label fx:id="lblLastName" alignment="CENTER" prefHeight="44.0" prefWidth="111.0" text="Last name:">
+                    <font>
+                        <Font name="Dubai Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="txtLastname" prefWidth="200.0">
+                    <padding>
+                        <Insets left="250.0" right="250.0"/>
+                    </padding>
+                </JFXTextField>
+                <Label fx:id="lblGender1" alignment="CENTER" prefHeight="44.0" prefWidth="111.0" text="Email:">
+                    <font>
+                        <Font name="Dubai Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="txtEmail">
+                    <padding>
+                        <Insets left="250.0" right="250.0"/>
+                    </padding>
+                </JFXTextField>
+                <Label fx:id="lblGender" alignment="CENTER" prefHeight="44.0" prefWidth="111.0" text="Gender:">
+                    <font>
+                        <Font name="Dubai Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="txtGender">
+                    <padding>
+                        <Insets left="250.0" right="250.0"/>
+                    </padding>
+                </JFXTextField>
+                <Label fx:id="lblProfession" alignment="CENTER" prefHeight="44.0" prefWidth="111.0" text="Profession: ">
+                    <font>
+                        <Font name="Dubai Medium" size="18.0"/>
+                    </font>
+                </Label>
+                <JFXTextField fx:id="txtProfession">
+                    <padding>
+                        <Insets left="250.0" right="250.0"/>
+                    </padding>
+                </JFXTextField>
+            </children>
+        </VBox>
+    </center>
+</BorderPane>
