@@ -1,9 +1,10 @@
 .root {
     -fx-focus-color: -fx-accent;
-    -fx-base: #373e43;
+    -fx-base: #5e676e;
     -fx-control-inner-background: derive(-fx-base, 35%);
     -fx-control-inner-background-alt: -fx-control-inner-background;
-    -fx-font-family: "Corbel Light";
+    -fx-font-family: "Corbel";
+    -fx-font-size: 16;
     -fx-font-weight: bold;
     -fx-text-fill: #d3cbb4;
 }
@@ -20,36 +21,38 @@
     -fx-font-family: Corbel;
     -fx-font-size: 20px;
 }
-.menu:hover{
+
+.menu:hover {
     -fx-background-color: grey;
 }
 
-.menu:focused:hover{
+.menu:focused:hover {
     -fx-background-color: grey;
 }
 
-.menu:showing{
+.menu:showing {
     -fx-background-color: grey;
 }
 
-.menu-item:focused{
-    -fx-background-color: grey;
-
-}
-
-.menu-item:focused:hover{
-    -fx-background-color: grey;
-}
-
-.menu-item:hover{
+.menu-item:focused {
     -fx-background-color: grey;
 
 }
 
-.menu-item{
+.menu-item:focused:hover {
+    -fx-background-color: grey;
+}
+
+.menu-item:hover {
+    -fx-background-color: grey;
+
+}
+
+.menu-item {
     -fx-padding: 5;
     -fx-spacing: 0;
 }
+
 .button {
     -fx-focus-traversable: false;
     -fx-font-family: "Corbel Light";

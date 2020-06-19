@@ -3,6 +3,7 @@ package com.yannick.FX;
 import com.jfoenix.controls.JFXTextField;
 import com.yannick.IO.PersonIO;
 import com.yannick.Person.Person;
+import com.yannick.components.PopupWindow;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -11,6 +12,7 @@ import javafx.scene.control.MenuBar;
 import javafx.stage.Stage;
 
 import java.awt.*;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -121,6 +123,17 @@ public class PersonController {
     @FXML
     private void close() {
         Platform.exit();
+    }
+
+    @FXML
+    private void clearDataFile() throws FileNotFoundException {
+        PopupWindow pw = new PopupWindow("Data file cleared", "The file contents have been cleared", "OK");
+        pw.getButton().setOnAction(event -> {
+            pw.hide();
+        });
+
+        pw.show();
+        PersonIO.clearPersonFromFile();
     }
 
 

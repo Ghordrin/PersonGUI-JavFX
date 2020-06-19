@@ -1,10 +1,11 @@
 package com.yannick.IO;
 
 import com.yannick.Person.Person;
+import lombok.Data;
 
 import java.io.*;
 
-
+@Data
 public class PersonIO {
     private static File data = new File("person.txt");
 
@@ -41,6 +42,11 @@ public class PersonIO {
             return null;
         }
 
+    }
+
+    public static void clearPersonFromFile() throws FileNotFoundException {
+        PrintWriter pw = new PrintWriter(data);
+        pw.close();
     }
 
 }
