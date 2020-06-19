@@ -3,7 +3,7 @@ package com.yannick.FX;
 import com.jfoenix.controls.JFXTextField;
 import com.yannick.IO.PersonIO;
 import com.yannick.Person.Person;
-import com.yannick.components.PopupWindow;
+import com.yannick.components.Popup;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -19,10 +19,6 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 
-
-/**
- * The type Person controller.
- */
 public class PersonController {
     /**
      * The Txt name.
@@ -59,7 +55,7 @@ public class PersonController {
 
 
     /**
-     * Initialize.
+     * Initialize. Sets all the handlers for the buttons.
      */
     public void initialize() {
         btnRetrievePerson.setOnAction(event -> retrievePersonButtonHandler());
@@ -67,8 +63,11 @@ public class PersonController {
         btnSaveNewPerson.setOnAction(event -> saveNewPersonButtonHandler());
         menuBar.setOnMouseDragged(event -> draggableMenu());
 
-
     }
+
+    /**
+     * Button handler to save a person to the data file. Validates the fields before being able to press submit.
+     */
 
     @FXML
     private void saveNewPersonButtonHandler() {
@@ -125,9 +124,14 @@ public class PersonController {
         Platform.exit();
     }
 
+    /**
+     * Clears the data from the file without deleting it.
+     *
+     * @throws FileNotFoundException
+     */
     @FXML
     private void clearDataFile() throws FileNotFoundException {
-        PopupWindow pw = new PopupWindow("Data file cleared", "The file contents have been cleared", "OK");
+        Popup pw = new Popup("Data file cleared", "The file contents have been cleared");
         pw.getButton().setOnAction(event -> {
             pw.hide();
         });

@@ -16,6 +16,14 @@
 
 }
 
+
+#lblErrorText {
+    -fx-text-fill: #851319;
+    -fx-font-family: "Corbel";
+    -fx-font-weight: bold;
+    -fx-font-size: 24;
+}
+
 .menu-bar {
     -fx-font-family: Corbel;
     -fx-font-size: 20px;

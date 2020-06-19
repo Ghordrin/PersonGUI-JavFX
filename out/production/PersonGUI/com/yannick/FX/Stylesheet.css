@@ -16,40 +16,50 @@
 
 }
 
+
+#lblErrorText{
+    -fx-text-fill: #851319;
+    -fx-font-family: "Corbel";
+    -fx-font-weight: bold;
+    -fx-font-size: 24;
+}
+
 .menu-bar {
     -fx-font-family: Corbel;
     -fx-font-size: 20px;
 }
-.menu:hover{
+
+.menu:hover {
     -fx-background-color: grey;
 }
 
-.menu:focused:hover{
+.menu:focused:hover {
     -fx-background-color: grey;
 }
 
-.menu:showing{
+.menu:showing {
     -fx-background-color: grey;
 }
 
-.menu-item:focused{
-    -fx-background-color: grey;
-
-}
-
-.menu-item:focused:hover{
-    -fx-background-color: grey;
-}
-
-.menu-item:hover{
+.menu-item:focused {
     -fx-background-color: grey;
 
 }
 
-.menu-item{
+.menu-item:focused:hover {
+    -fx-background-color: grey;
+}
+
+.menu-item:hover {
+    -fx-background-color: grey;
+
+}
+
+.menu-item {
     -fx-padding: 5;
     -fx-spacing: 0;
 }
+
 .button {
     -fx-focus-traversable: false;
     -fx-font-family: "Corbel Light";
