@@ -45,7 +45,7 @@ public class Popup extends Stage {
     }
 
     /**
-     * Method for popup without specific button text. Uses the default value.
+     * Constructor for popup without specific button text. Uses the default value.
      *
      * @param title          The title for this popup.
      * @param messageContent The message to be displayed.

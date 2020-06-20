@@ -173,7 +173,7 @@ public class PersonController {
     /**
      * Adds all the text fields to a list so it can easily be traversed for checking validation.
      *
-     * @param list
+     * @param list A list of all the current text fields.
      */
     private void addFieldsToList(List<JFXTextField> list) {
         this.textFieldList = list;

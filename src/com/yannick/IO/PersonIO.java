@@ -4,9 +4,13 @@ import com.yannick.Person.Person;
 import lombok.Data;
 
 import java.io.*;
+import java.util.logging.FileHandler;
+import java.util.logging.Logger;
 
 @Data
 public class PersonIO {
+    private static final Logger logger = Logger.getLogger(String.valueOf(PersonIO.class));
+    private static FileHandler fh;
     private static File data = new File("person.txt");
 
     /**
@@ -30,7 +34,7 @@ public class PersonIO {
     /**
      * Gets the last saved person from the file.
      *
-     * @return a {@link Person} object
+     * @return a {@link Person} objec
      */
     public static Person retrieveLastPersonFromFile() {
         try {
